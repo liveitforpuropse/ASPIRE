@@ -124,7 +124,9 @@
         var(--bg);
     }
 
-    .hero-inner { max-width: 780px; }
+    .hero-inner { max-width: 980px; display: grid; grid-template-columns: 1fr 380px; gap: 3rem; align-items: center; text-align: left; }
+    .hero-image img { width: 100%; max-width: 360px; drop-shadow: 0 12px 40px rgba(249,168,201,0.3); }
+    @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; text-align: center; } .hero-image { order: -1; text-align: center; } .hero-image img { max-width: 240px; } }
 
     .hero-badge {
       display: inline-flex;
@@ -638,22 +640,27 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-<h1>
-        <span class="highlight">Helping Students Rise</span><br/>
-        Beyond Their Circumstances
-      </h1>
-      <p>
-        A corporate-community initiative where like-minded professionals come together
-        to fund education for students from low-income families — directly, transparently,
-        and with a legacy of paying it forward.
-      </p>
-      <div class="hero-actions">
-        <a href="mailto:shashis310117@gmail.com" class="btn-primary">Support a Student</a>
-        <a href="#how-it-works" class="btn-outline">How It Works</a>
+      <div class="hero-text">
+        <h1>
+          <span class="highlight">Helping Students Rise</span><br/>
+          Beyond Their Circumstances
+        </h1>
+        <p>
+          A corporate-community initiative where like-minded professionals come together
+          to fund education for students from low-income families — directly, transparently,
+          and with a legacy of paying it forward.
+        </p>
+        <div class="hero-actions">
+          <a href="mailto:shashis310117@gmail.com" class="btn-primary">Support a Student</a>
+          <a href="#how-it-works" class="btn-outline">How It Works</a>
+        </div>
+        <p class="founder-note">
+          Founded by <strong>Shashikala Subramani</strong> — because every student deserves a chance to rise.
+        </p>
       </div>
-      <p class="founder-note">
-        Founded by <strong>Shashikala Subramani</strong> — because every student deserves a chance to rise.
-      </p>
+      <div class="hero-image">
+        <img src="aspire-drop.png" alt="A school girl walking towards graduation — the Aspire journey" />
+      </div>
     </div>
   </section>
 
